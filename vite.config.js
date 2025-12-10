@@ -1,35 +1,28 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import { nodePolyfills } from "vite-plugin-node-polyfills"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    nodePolyfills({
-      include: ["buffer", "process"]
-    })
-  ],
+  plugins: [react()],
   server: {
     port: 3000,
     host: true
   },
   define: {
-    global: "globalThis",
-    "process.env": {}
+    global: 'globalThis',
+    'process.env': {}
   },
   build: {
-    target: "esnext",
+    target: 'esnext',
     commonjsOptions: {
       transformMixedEsModules: true
     }
   },
   optimizeDeps: {
-    include: ["buffer", "process"],
+    include: ['buffer'],
     esbuildOptions: {
       define: {
-        global: "globalThis"
+        global: 'globalThis'
       }
     }
   }
 })
-
