@@ -1,0 +1,31 @@
+echo '<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solana Pay | Secure & Fast Transactions</title>
+    <meta name="description" content="Send SOL instantly with Solana Pay. Secure, fast, and easy transactions." />
+    <style>
+      body {
+        margin: 0;
+        background: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      
+      #root {
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+      }
+      
+      #root.loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>' > index.html
+
